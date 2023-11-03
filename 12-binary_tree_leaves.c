@@ -8,6 +8,9 @@
 
 size_t binary_tree_leaves(const binary_tree_t *tree)
 {
+	size_t lft;
+	size_t rt;
+
 	if (tree == NULL)
 	{
 		return (0);
@@ -17,8 +20,8 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 	{
 		return (1);
 	}
-	size_t lft = binary_tree_leaves(tree->left);
-	size_t rt = binary_tree_leaves(tree->right);
+	lft = binary_tree_leaves(tree->left);
+	rt = binary_tree_leaves(tree->right);
 
 	return (lft + rt);
 }
